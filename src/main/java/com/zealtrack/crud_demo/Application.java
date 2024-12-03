@@ -20,8 +20,18 @@ public class Application {
 		return runner -> {
 			System.out.println("Hi, Mom");
 //			createInstructor(appDAO);
-			findInstructor(appDAO);
+//			findInstructor(appDAO);
+			deleteInstructor(appDAO);
 		};
+	}
+
+	private void deleteInstructor(AppDAO appDAO) {
+		int theId =1;
+		System.out.println("Deleting instrcutor id: " + theId);
+
+		appDAO.deleteInstructorById(theId);
+
+		System.out.println("Done!");
 	}
 
 	private void findInstructor(AppDAO appDAO) {
@@ -35,7 +45,7 @@ public class Application {
 	}
 
 	private void createInstructor(AppDAO appDAO) {
-		/*
+
 		Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
 
 		InstructorDetail tempInstructorDetail = new InstructorDetail(
@@ -44,16 +54,16 @@ public class Application {
 		);
 
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
-		*/
 
-		Instructor tempInstructor = new Instructor("Madhu2", "Patel2", "madhu2@luv2code.com");
 
-		InstructorDetail tempInstructorDetail = new InstructorDetail(
-				"http://www.luv2code.com/youtube",
-				"Guitar"
-		);
-
-		tempInstructor.setInstructorDetail(tempInstructorDetail);
+//		Instructor tempInstructor = new Instructor("Madhu2", "Patel2", "madhu2@luv2code.com");
+//
+//		InstructorDetail tempInstructorDetail = new InstructorDetail(
+//				"http://www.luv2code.com/youtube",
+//				"Guitar"
+//		);
+//
+//		tempInstructor.setInstructorDetail(tempInstructorDetail);
 
 
 		System.out.println("Saving instructor: " + tempInstructor);
